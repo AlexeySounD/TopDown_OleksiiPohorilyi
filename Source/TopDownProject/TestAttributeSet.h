@@ -19,4 +19,8 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	FGameplayAttributeData TestAttribute;
 	ATTRIBUTE_ACCESSORS(UTestAttributeSet, TestAttribute);
+
+	UPROPERTY(BlueprintReadOnly)
+	FGameplayAttributeData Health;
+	ATTRIBUTE_ACCESSORS(UTestAttributeSet, Health);
 };
