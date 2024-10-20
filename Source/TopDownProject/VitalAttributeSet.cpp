@@ -10,22 +10,22 @@ void UVitalAttributeSet::PreAttributeChange(const FGameplayAttribute& Attribute,
 	if (Attribute == GetHealthAttribute())
 	{
 		NewValue = FMath::Clamp(NewValue, 0.f, MaxHealth.GetCurrentValue());
-	}
+	}	
 }
 
 void UVitalAttributeSet::PostAttributeChange(const FGameplayAttribute& Attribute, float OldValue, float NewValue)
 {
 	Super::PostAttributeChange(Attribute, OldValue, NewValue);
 
-	if (Attribute == GetHealthAttribute())
-	{
-		if (NewValue <= 0.f)
-		{
-			if (GEngine)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Character dead"));
-			}
-		}
-	}
+	//if (Attribute == GetHealthAttribute())
+	//{
+	//	if (NewValue <= 0.f)
+	//	{
+	//		if (GEngine)
+	//		{
+	//			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Character dead"));
+	//		}
+	//	}
+	//}
 
 }
